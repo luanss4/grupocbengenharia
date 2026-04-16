@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance | Grupo CB Engenharia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-box">CB</div>
+            <div class="logo-text">GRUPO CB<span>ENGENHARIA</span></div>
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="contato.html" class="cta-nav">Orçamento</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>Programa de Integridade</h2>
+    <p class="section-subtitle">Compromisso inegociável com a ética, transparência e governança técnica.</p>
+
+    <div class="info-box">
+        <p style="font-size: 1.1rem; color: var(--primary); margin-bottom: 30px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+            O <strong>Grupo CB Engenharia</strong> mantém sua governança rigorosamente alinhada à <strong>Lei Anticorrupção (Lei nº 12.846/2013)</strong>, assegurando que todas as operações sigam os mais altos padrões morais e legais.
+        </p>
+
+        <div class="grid-servicos">
+            <div class="card-servico">
+                <div class="servico-number">01</div>
+                <h3>Código de Conduta</h3>
+                <p>Diretrizes mandatórias para colaboradores e parceiros, estabelecendo as normas de comportamento e responsabilidade socioambiental da empresa.</p>
+            </div>
+
+            <div class="card-servico">
+                <div class="servico-number">02</div>
+                <h3>Política Anticorrupção</h3>
+                <p>Tolerância zero a práticas de fraude ou suborno. Monitoramos processos internos para mitigar riscos em licitações e contratos privados.</p>
+            </div>
+
+            <div class="card-servico">
+                <div class="servico-number">03</div>
+                <h3>Transparência Fiscal</h3>
+                <p>Rigor no reporte de dados financeiros e conformidade com as obrigações tributárias, garantindo a saúde jurídica da OA Engenharia Inteligente.</p>
+            </div>
+        </div>
+
+        <div class="tech-info" style="margin-top: 50px; padding: 40px; text-align: center;">
+            <h3 style="color: var(--primary); font-family: Montserrat; margin-bottom: 15px;">Canal de Denúncia Ética</h3>
+            <p style="max-width: 700px; margin: 0 auto 20px;">
+                Disponibilizamos um canal exclusivo e sigiloso para o reporte de irregularidades. Garantimos total anonimato e proteção ao denunciante.
+            </p>
+            <a href="mailto:compliance@grupocbengenharia.com.br" 
+               style="display: inline-block; background: var(--primary); color: var(--secondary); padding: 15px 30px; border-radius: 4px; text-decoration: none; font-weight: 800; border: 2px solid var(--primary); transition: var(--transition);">
+                compliance@grupocbengenharia.com.br
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p><strong>Grupo CB Engenharia</strong> - Gestão Ética e Inteligente.</p>
+        <p>OA Engenharia Inteligente Ltda. | CNPJ: 33.113.792/0001-60</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

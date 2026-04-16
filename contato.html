@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Grupo CB Engenharia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contato-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+            margin-bottom: 60px;
+        }
+        .map-box {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(33,67,101,0.07);
+            min-height: 400px;
+            background: #eee;
+        }
+        @media (max-width: 900px) {
+            .contato-grid{
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .map-box { min-height: 300px; }
+        }
+    </style>
+</head>
+<body>
+  
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-box">CB</div>
+            <div class="logo-text">GRUPO CB<span>ENGENHARIA</span></div>
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="contato.html" class="cta-nav">Orçamento</a></li>
+        </ul>
+    </nav>
+</header>
+  
+<section>
+    <h2>Consultoria e Orçamentos</h2>
+    <p class="section-subtitle">Resposta técnica em até 24 horas para demandas de infraestrutura e engenharia civil.</p>
+  <div class="contato-grid">
+        <div>
+            <div class="info-box" style="padding: 30px; margin-bottom: 20px; border-left: 5px solid var(--secondary);">
+                <h3 style="margin-bottom: 15px; font-family: Montserrat;">Canais de Atendimento</h3>
+                <div style="margin-bottom: 25px;">
+                    <span style="display: block; font-weight: 600; color: var(--primary); font-size: 0.8rem; text-transform: uppercase;">Sede Operacional</span>
+                    <p>Q QUADRA QC 12 LOTES 01/07 BLOCO J SALA 301B<br>Taguatinga Centro, Brasília – DF<br>CEP: 72.010-120</p>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <span style="display: block; font-weight: 600; color: var(--primary); font-size: 0.8rem; text-transform: uppercase;">Telefone e WhatsApp</span>
+                    <p style="font-size: 1.2rem; font-weight: 600;">(61) 98356-7066</p>
+                </div>
+                <div>
+                    <span style="display: block; font-weight: 600; color: var(--primary); font-size: 0.8rem; text-transform: uppercase;">E-mail</span>
+                    <p>comercial@grupocbengenharia.com.br</p>
+                </div>
+            </div>
+            <div class="tech-info">
+                <p><strong>Atenção:</strong> Para denúncias de compliance, utilize o canal exclusivo na página correspondente.</p>
+            </div>
+            <div class="info-box" style="padding: 40px; margin-top:34px;">
+                <h3 style="margin-bottom: 20px; font-family: Montserrat; text-align: center;">Proposta Técnica</h3>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Nome Completo ou Razão Social" required style="margin-bottom: 15px;">
+                    <input type="email" placeholder="E-mail Corporativo" required style="margin-bottom: 15px;">
+                    <input type="tel" placeholder="Telefone com DDD" required style="margin-bottom: 15px;">
+                    <select style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 15px; font-family: inherit; background: white;">
+                        <option value="" disabled selected>Tipo de Demanda</option>
+                        <option value="pavimentacao">Pavimentação Asfáltica</option>
+                        <option value="drenagem">Drenagem Pluvial</option>
+                        <option value="terraplenagem">Terraplenagem</option>
+                        <option value="outros">Outros Projetos Civis</option>
+                    </select>
+                    <textarea placeholder="Descreva brevemente o local e o tamanho da obra..." rows="4" required style="margin-bottom: 15px;"></textarea>
+                    <button type="submit" class="submit" style="width: 100%; font-size: 1rem; letter-spacing: 1px;">
+                        ENVIAR PARA ANÁLISE DO ENGENHEIRO
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="map-box">
+            <iframe
+                title="Mapa Grupo CB Engenharia"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                style="border:0; min-height:400px;"
+                src="https://www.google.com/maps?q=Q+QUADRA+QC+12+LOTES+01%2F07+BLOCO+J+SALA+301B%2C+Taguatinga+Centro,+Brasilia,+DF&output=embed"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+  
+<a href="https://wa.me/5561983567066" target="_blank" style="position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; font-size: 1.5rem;">
+    <span style="font-weight: bold;">WA</span>
+</a>
+  
+<footer>
+    <div class="footer-content">
+        <p><strong>Grupo CB Engenharia</strong> - OA Engenharia Inteligente Ltda.</p>
+        <p>CNPJ: 33.113.792/0001-60 | Eng. Carlos Bruno – CREA 29156/D-DF</p>
+    </div>
+</footer>
+  
+<script>
+    function toggleMenu() { document.getElementById('menu').classList.toggle('active'); }
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,316 @@
+/* style.css - Grupo CB Engenharia */
+
+/* 1. Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap');
+
+/* 2. Variáveis de Cor e Estilo */
+:root {
+    --primary: #1A2B3C;
+    --secondary: #FF6B00;
+    --bg-light: #F4F7F9;
+    --white: #FFFFFF;
+    --text-dark: #2D3436;
+    --text-muted: #636E72;
+    --shadow: 0 10px 30px rgba(26, 43, 60, 0.05);
+    --transition: all 0.3s ease;
+}
+
+/* 3. Reset e Estilos Base */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 4. Header & Navegação */
+header {
+    background: var(--white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 90px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Logo Corporativa */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo-box {
+    background: var(--primary);
+    color: var(--secondary);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-radius: 4px;
+    border-right: 4px solid var(--secondary);
+}
+
+.logo-text {
+    line-height: 1.1;
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--secondary);
+}
+
+/* Menu */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a:not(.cta-nav)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary);
+    transition: var(--transition);
+}
+
+.nav-links a:hover { color: var(--secondary); }
+.nav-links a:hover::after { width: 100%; }
+
+.cta-nav {
+    background: var(--secondary);
+    color: var(--white) !important;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 0 4px 0 #d35400;
+}
+
+/* 5. Seções e Estrutura */
+section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+}
+
+/* 6. GRID DE OBRAS (ESTILO QUADRADINHO) */
+.obras-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card-obra {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.card-obra:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.card-obra img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.card-obra-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-obra-content h3 {
+    font-size: 0.95rem;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.card-obra-content p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* 7. GRID DE SERVIÇOS (ESTILO CORPORATIVO) */
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-servico {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 5px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-servico:hover {
+    border-left-color: var(--secondary);
+    transform: translateX(5px);
+}
+
+.servico-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(26, 43, 60, 0.03);
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    z-index: 1;
+}
+
+/* 8. Formulário e Outros */
+.info-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+button.submit {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+button.submit:hover { background: var(--secondary); }
+
+/* 9. Footer */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 8px solid var(--secondary);
+}
+
+/* 10. Responsividade */
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+.hamburger span { width: 30px; height: 3px; background: var(--primary); border-radius: 2px; }
+
+@media (max-width: 992px) {
+    .hamburger { display: flex; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 40px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+    .nav-links.active { display: flex; }
+}
+
+/* Scroll lateral apenas em telas muito pequenas (celulares) */
+@media (max-width: 600px) {
+    .obras-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+        gap: 15px;
+    }
+    .card-obra {
+        min-width: 200px;
+        scroll-snap-align: start;
+    }
+    /* Estilização da barrinha de scroll */
+    .obras-container::-webkit-scrollbar { height: 4px; }
+    .obras-container::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 10px; }
+}

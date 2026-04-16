@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Grupo CB Engenharia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-box">CB</div>
+            <div class="logo-text">GRUPO CB<span>ENGENHARIA</span></div>
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="contato.html" class="cta-nav">Orçamento</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>Nossas Soluções em Engenharia</h2>
+    <p class="section-subtitle">Oferecemos suporte técnico especializado e execução de alta performance para o setor público e privado.</p>
+    
+    <div class="grid-servicos">
+        <div class="card-servico">
+            <div class="servico-number">01</div>
+            <h3>Engenharia Civil e Estrutural</h3>
+            <p>Gestão técnica e execução de projetos de infraestrutura civil. Atuamos desde a fundação até a superestrutura, garantindo a integridade e conformidade normativa de cada etapa.</p>
+        </div>
+
+        <div class="card-servico">
+            <div class="servico-number">02</div>
+            <h3>Pavimentação Asfáltica (CBUQ)</h3>
+            <p>Aplicação de Concreto Betuminoso Usinado a Quente. Nossa pavimentação foca na durabilidade e resistência ao tráfego intenso, seguindo rigorosos padrões de compactação.</p>
+        </div>
+
+        <div class="card-servico">
+            <div class="servico-number">03</div>
+            <h3>Drenagem Pluvial</h3>
+            <p>Implantação de redes de águas pluviais, galerias, aduelas e sistemas de drenagem urbana projetados para evitar alagamentos e garantir o escoamento eficiente.</p>
+        </div>
+
+        <div class="card-servico">
+            <div class="servico-number">04</div>
+            <h3>Terraplenagem e Geotecnia</h3>
+            <p>Movimentação de terra, cortes, aterros e compactação de solos com controle tecnológico, preparando o terreno para receber qualquer tipo de infraestrutura.</p>
+        </div>
+
+        <div class="card-servico">
+            <div class="servico-number">05</div>
+            <h3>Urbanização e Calçamentos</h3>
+            <p>Execução de meios-fios, sarjetas, calçadas em concreto e pavimentação intertravada (paver), focando na estética e acessibilidade urbana.</p>
+        </div>
+
+        <div class="card-servico">
+            <div class="servico-number">06</div>
+            <h3>Consultoria Técnica</h3>
+            <p>Assessoria no planejamento de obras, elaboração de orçamentos detalhados e fiscalização técnica para otimizar o custo-benefício do seu projeto.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p><strong>Grupo CB Engenharia</strong> - Qualidade e Solidez em cada projeto.</p>
+        <p>OA Engenharia Inteligente Ltda. | CNPJ: 33.113.792/0001-60</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

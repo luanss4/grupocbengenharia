@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Grupo CB Engenharia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-box">CB</div>
+            <div class="logo-text">GRUPO CB<span>ENGENHARIA</span></div>
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="contato.html" class="cta-nav">Orçamento</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>Excelência Técnica em Engenharia</h2>
+    <p class="section-subtitle">Conheça a trajetória e o compromisso técnico do Grupo CB Engenharia.</p>
+
+    <div class="info-box" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+        
+        <div style="flex: 1.5; min-width: 320px;">
+            <p style="margin-bottom: 20px; font-size: 1.1rem;">
+                O <strong>Grupo CB Engenharia</strong> é a consolidação da marca <strong>OA Engenharia Inteligente Ltda.</strong>, nascida com o propósito de elevar os padrões de execução no mercado nacional de infraestrutura. 
+            </p>
+            <p style="margin-bottom: 20px;">
+                Especializada em obras de pavimentação, terraplenagem e drenagem pluvial, a empresa destaca-se pela aplicação de metodologias modernas de planejamento estratégico. Entendemos que uma obra de sucesso não se faz apenas com máquinas, mas com uma gestão operacional rigorosa que garante o cumprimento fiel de cronogramas e orçamentos.
+            </p>
+            <p style="margin-bottom: 20px;">
+                Nosso compromisso vai além da entrega física: buscamos a durabilidade dos ativos viários e a segurança nas fundações, sempre amparados pelas normas técnicas da ABNT e órgãos reguladores. Com atuação em todo o território nacional, o Grupo CB é sinônimo de solidez e precisão técnica.
+            </p>
+
+            <div class="tech-info">
+                <p><strong>Responsável Técnico:</strong> Eng. Carlos Bruno Oliveira</p>
+                <p>Registro Profissional: <strong>CREA nº 29156/D-DF</strong></p>
+                <p style="margin-top: 5px; font-size: 0.85rem; opacity: 0.8;">OA Engenharia Inteligente Ltda. | CNPJ: 33.113.792/0001-60</p>
+            </div>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
+            <div class="card-servico" style="padding: 25px; border-left-color: var(--secondary);">
+                <h4 style="color: var(--primary); font-family: Montserrat; margin-bottom: 10px;">Missão</h4>
+                <p style="font-size: 0.9rem;">Prover soluções de engenharia inteligente que transformam a infraestrutura urbana e rodoviária do país.</p>
+            </div>
+
+            <div class="card-servico" style="padding: 25px;">
+                <h4 style="color: var(--primary); font-family: Montserrat; margin-bottom: 10px;">Visão</h4>
+                <p style="font-size: 0.9rem;">Ser referência em agilidade e precisão técnica na execução de obras complexas até 2028.</p>
+            </div>
+
+            <div class="card-servico" style="padding: 25px; border-left-color: var(--secondary);">
+                <h4 style="color: var(--primary); font-family: Montserrat; margin-bottom: 10px;">Valores</h4>
+                <p style="font-size: 0.9rem;">Integridade ética, rigor técnico, transparência orçamentária e respeito socioambiental.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p><strong>Grupo CB Engenharia</strong> - Soluções em Infraestrutura.</p>
+        <p>© 2024 Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
