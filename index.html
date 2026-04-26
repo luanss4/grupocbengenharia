@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Obras Técnicas | Grupo CB Engenharia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    <nav>
+        <div class="logo"><span class="logo-box">CB</span> Grupo CB</div>
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+
+        <ul class="nav-links" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="contato.html" class="cta-nav">Fale Conosco</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>Nosso Portfólio</h2>
+    <p class="section-subtitle">Clique e arraste para ver nossas execuções recentes.</p>
+
+    <div class="obras-container">
+        <div class="card-obra">
+            <img src="img/obra1.jpeg" alt="Obra 1">
+            <div class="card-obra-content">
+                <h3>Pavimentação</h3>
+                <p>Brasília - DF</p>
+            </div>
+        </div>
+
+        <div class="card-obra">
+            <img src="img/obra2.jpeg" alt="Obra 2">
+            <div class="card-obra-content">
+                <h3>Terraplenagem</h3>
+                <p>Setor Industrial</p>
+            </div>
+        </div>
+
+        <div class="card-obra">
+            <img src="img/obra3.jpeg" alt="Obra 3">
+            <div class="card-obra-content">
+                <h3>Drenagem</h3>
+                <p>Gama - DF</p>
+            </div>
+        </div>
+
+        <div class="card-obra">
+            <img src="img/obra10.jpeg" alt="Obra 10">
+            <div class="card-obra-content">
+                <h3>Urbanização</h3>
+                <p>Projeto Finalizado</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p><strong>Grupo CB Engenharia</strong> - OA Engenharia Inteligente Ltda.</p>
+    <p>CNPJ: 33.113.792/0001-60 | Responsável Técnico: Eng. Carlos Bruno – CREA 29156/D-DF</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+</body>
+</html>
