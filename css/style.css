@@ -1,0 +1,596 @@
+/* style.css - Grupo CB Engenharia */
+
+/* 1. Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap');
+
+/* 2. Variáveis de Cor e Estilo */
+:root {
+    --primary: #1A2B3C;
+    --secondary: #FF6B00;
+    --bg-light: #F4F7F9;
+    --white: #FFFFFF;
+    --text-dark: #2D3436;
+    --text-muted: #636E72;
+    --shadow: 0 10px 30px rgba(26, 43, 60, 0.05);
+    --transition: all 0.3s ease;
+}
+
+/* 3. Reset e Estilos Base */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 4. Header & Navegação */
+header {
+    background: var(--white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 90px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Logo Corporativa */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo-box {
+    background: var(--primary);
+    color: var(--secondary);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-radius: 4px;
+    border-right: 4px solid var(--secondary);
+}
+
+.logo-text {
+    line-height: 1.1;
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--secondary);
+}
+
+/* Menu */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a:not(.cta-nav)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary);
+    transition: var(--transition);
+}
+
+.nav-links a:hover { color: var(--secondary); }
+.nav-links a:hover::after { width: 100%; }
+
+.cta-nav {
+    background: var(--secondary);
+    color: var(--white) !important;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 0 4px 0 #d35400;
+}
+
+/* 5. Seções e Estrutura */
+section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+}
+
+/* 6. GRID DE OBRAS (ESTILO QUADRADINHO) */
+.obras-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card-obra {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.card-obra:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.card-obra img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.card-obra-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-obra-content h3 {
+    font-size: 0.95rem;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.card-obra-content p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* 7. GRID DE SERVIÇOS (ESTILO CORPORATIVO) */
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-servico {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 5px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-servico:hover {
+    border-left-color: var(--secondary);
+    transform: translateX(5px);
+}
+
+.servico-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(26, 43, 60, 0.03);
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    z-index: 1;
+}
+
+/* 8. Formulário e Outros */
+.info-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+button.submit {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+button.submit:hover { background: var(--secondary); }
+
+/* 9. Footer */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 8px solid var(--secondary);
+}
+
+/* 10. Responsividade */
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+.hamburger span { width: 30px; height: 3px; background: var(--primary); border-radius: 2px; }
+
+@media (max-width: 992px) {
+    .hamburger { display: flex; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 40px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+    .nav-links.active { display: flex; }
+}
+
+/* Scroll lateral apenas em telas muito pequenas (celulares) */
+@media (max-width: 600px) {
+    .obras-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+        gap: 15px;
+    }
+    .card-obra {
+        min-width: 200px;
+        scroll-snap-align: start;
+    }
+    /* Estilização da barrinha de scroll */
+    .obras-container::-webkit-scrollbar { height: 4px; }
+    .obras-container::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 10px; }
+}
+
+
+/* 11. BANNER RESPONSIVO */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-top: -90px;
+    padding-top: 90px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 43, 60, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    z-index: 10;
+}
+
+.banner-overlay h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.banner-overlay p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 11. BANNER RESPONSIVO */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 43, 60, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    z-index: 10;
+}
+
+.banner-overlay h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.banner-overlay p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* 12. CARROUSEL */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.carousel-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-content {
+    padding: 25px;
+    text-align: center;
+    background: var(--white);
+}
+
+.carousel-content h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+}
+
+.carousel-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.carousel-btn {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Indicadores */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.indicator.active {
+    background: var(--secondary);
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+  .banner-overlay h1 {
+        font-size: 2.2rem;
+    }
+  .banner-overlay p {
+        font-size: 1rem;
+    }
+  .carousel-item img {
+        height: 250px;
+    }
+  .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+  .carousel-container {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 200px;
+    }
+  .banner-overlay h1 {
+        font-size: 1.6rem;
+    }
+  .banner-overlay p {
+        font-size: 0.85rem;
+    }
+  .carousel-item img {
+        height: 200px;
+    }
+  .carousel-content {
+        padding: 15px;
+    }
+  .carousel-content h3 {
+        font-size: 1rem;
+    }
+  .carousel-content p {
+        font-size: 0.8rem;
+    }
+  .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* 13. GRUPOS DE PORTFÓLIO */
+.portfolio-group {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #eee;
+}
+
+.portfolio-group:last-child {
+    border-bottom: none;
+}
+
+.group-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    padding-left: 10px;
+    border-left: 5px solid var(--secondary);
+}
+
+.carousel-content h4 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-group {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+    }
+  .group-title {
+        font-size: 1.3rem;
+    }
+}
