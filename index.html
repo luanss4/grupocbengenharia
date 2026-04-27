@@ -21,6 +21,13 @@
       <li><a href="compliance.html">Compliance</a></li>
       <li><a href="contato.html" class="cta-nav">Fale Conosco</a></li>
     </ul>
+
+    <!-- HAMBURGUER -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
 </header>
 
@@ -154,5 +161,12 @@
 </footer>
 
 <script src="js/carousel.js"></script>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
